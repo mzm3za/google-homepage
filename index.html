@@ -1,3 +1,4 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
     a {
         color: black;
@@ -10,19 +11,14 @@
     
     header {
         font-size: 13px;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        right: 0px;
-        width: 100%;
-        height: 30px;
+        position: fixed;
     }
     
     #nav-links-left {
         display: grid;
         grid-template-columns: auto auto;
-        width: 20%;
-        position: absolute;
+        grid-column-gap: 10px;
+        position: fixed;
         left: 10px;
         top: 8px;
     }
@@ -30,52 +26,68 @@
     #nav-links-right {
         display: grid;
         grid-template-columns: auto auto;
-        width: 20%;
-        position: absolute;
+        grid-column-gap: 10px;
+        position: fixed;
         top: 8px;
         right: 10px;
         text-align: end;
     }
     
+    #google-search {
+        position: relative;
+        top: 60px;
+        height: 300px;
+        width: 500px;
+        margin: auto;
+    }
+    
     #google-img {
-        width: 300px;
-        display: block;
-        margin-top: 50px;
-        margin-left: auto;
-        margin-right: auto;
+        position: absolute;
+        margin: auto;
+        width: 100%;
+    }
+    
+    #search-box-area {
+        position: absolute;
+        height: 75px;
+        width: 100%;
+        top: 50%;
     }
     
     #text-box {
-        width: 280px;
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
+        position: absolute;
+        width: 90%;
+        top: 26%;
+        left: 5%;
     }
     
     #mic-img {
-        width: 10px;
+        width: 11px;
+        height: auto;
         position: absolute;
-        top: 148px;
-        right: 120px;
+        top: 30%;
+        left: 6%;
     }
     
     #search-img {
         width: 13px;
+        height: auto;
         position: absolute;
-        top: 148px;
-        left: 120px;
+        top: 30%;
+        right: 6%;
     }
     
     #submit-buttons {
         position: absolute;
-        width: 280px;
-        left: 33%;
+        width: 100%;
+        left: 35%;
+        top: 54%;
     }
     
     footer {
         font-size: 14px;
         background-color: rgb(222, 222, 222);
-        position: absolute;
+        position: fixed;
         bottom: 0px;
         left: 0px;
         right: 0px;
@@ -86,29 +98,27 @@
     
     #footer-links-left {
         position: absolute;
-        width: 47%;
         bottom: 5px;
         left: 10px;
         display: grid;
         grid-template-columns: auto auto auto;
+        grid-column-gap: 10px;
     }
     
     #footer-links-right {
-        position: absolute;
+        position: fixed;
         bottom: 0px;
         right: 10px;
         display: grid;
         grid-template-columns: auto auto auto;
-        width: 30%;
-        padding: 8px;
+        grid-column-gap: 10px;
+        padding: 10px;
         text-align: end;
     }
 </style>
 
 
-<style>
 
-</style>
 
 
 <header>
@@ -130,8 +140,10 @@
 
     <div id="google-search">
         <img id="google-img" src="https://www.google.com/logos/doodles/2020/thank-you-teachers-and-childcare-workers-6753651837108762.3-law.gif" alt="google.com picture">
-        <div id="search-box">
-            <input id="text-box" type="text"><img id="mic-img" src="https://www.clipartkey.com/mpngs/m/27-272205_google-microphone-png-google-search-by-voice-icon.png"><img id="search-img" src="https://images-na.ssl-images-amazon.com/images/I/41HeL2cy9LL.png">
+        <div id="search-box-area">
+            <input id="text-box" type="text">
+            <img id="mic-img" src="https://www.clipartkey.com/mpngs/m/27-272205_google-microphone-png-google-search-by-voice-icon.png">
+            <img id="search-img" src="https://images-na.ssl-images-amazon.com/images/I/41HeL2cy9LL.png">
             <div id="submit-buttons">
                 <button type="submit">Search</button>
                 <button type="submit">I'm Feeling Lucky
